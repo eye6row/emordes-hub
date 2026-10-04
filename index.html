@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>EMORDES / INDEX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}body{background:#0a0a0a;color:#f2f2f2;font-family:'IBM Plex Mono',monospace;padding:28px 18px 60px}
+header{border-bottom:1px solid #f2f2f2;padding-bottom:18px;margin-bottom:8px}
+h1{font-family:Anton,sans-serif;font-weight:400;font-size:clamp(64px,17vw,190px);line-height:.86;letter-spacing:-.01em;text-transform:uppercase}
+.meta{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-top:14px;color:#aaa}
+section{margin-top:40px}h2{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#888;display:flex;gap:10px;align-items:center;margin-bottom:12px}
+h2:after{content:"";flex:1;height:1px;background:#333}
+.grid{display:grid;grid-template-columns:1fr;gap:10px}
+a.card{display:flex;flex-direction:column;justify-content:space-between;min-height:132px;padding:16px;border:1px solid #2a2a2a;color:inherit;text-decoration:none;transition:background .2s,color .2s}
+a.card:hover,a.card:active{background:#f2f2f2;color:#0a0a0a}
+.top{display:flex;justify-content:space-between;gap:10px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#888}
+a.card:hover .top{color:#555}
+.n{font-family:Anton,sans-serif;font-size:30px;line-height:1;text-transform:uppercase;margin:14px 0 6px}
+.d{font-size:12px;line-height:1.5;color:#bbb}a.card:hover .d{color:#333}
+.go{align-self:flex-end;font-size:18px;margin-top:8px}
+.off{opacity:.45}.off .top span:last-child{color:#d64541}
+footer{margin-top:60px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#666;display:flex;justify-content:space-between}
+@media(min-width:720px){body{padding:48px 48px 80px}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
+</style></head><body>
+<header><h1>Emordes<br>Index</h1><div class="meta"><span>All projects</span><span>JH / 2026</span></div></header>
+<main id="m"></main>
+<footer><span>emordes.studio</span><span>Daly City, CA</span></footer>
+<script>
+const D=[
+["01 Studio",[["Emordes Studio","Main site, the creative house.","Main","https://emordes.studio"],["Studio Preview","Redesign preview, version one.","Preview","https://emordes-studio-preview.vercel.app"],["Studio Preview 2","Redesign preview, version two.","Preview","https://emordes-studio-preview2.vercel.app"],["Projects","Projects showcase sample with filmstrip slides.","Sample","https://emordes-projects.vercel.app"]]],
+["02 Laboratory",[["IZ Lab","Emordes Laboratory, textile and Binakol samples.","Lab","https://izlab.emordes.studio"],["IZ Lab Admin","Edit samples, crops, notes and requests.","Admin","https://izlab.emordes.studio/admin/"]]],
+["03 Tattoo",[["Gaje 777","An Emordes princess. Tattoo flash and booking.","Tattoo","https://gaje777.emordes.studio"]]],
+["04 Events",[["Events","Event pages, tickets, QR and tips.","Events","https://emordes-events.vercel.app"],["Checklist","Pre, during and post event checklist.","Tool","https://emordes-events.vercel.app/checklist.html"]]],
+["05 Calendar / Travel",[["Calendar","Emordes calendar.","Calendar","https://emordes-calendar.vercel.app"],["Cannes 2027","Cannes trip planning.","Travel","https://emordes-calendar.vercel.app/cannes.html"],["Songkran 2027","Songkran, Thailand.","Travel","https://emordes-calendar.vercel.app/songkran.html"]]],
+["06 Portfolio / Experiments",[["Furniture Map","Furniture render market map, sort by color, category, price.","Portfolio","https://furniture-map.vercel.app"],["WordPress Practice","Practice site. Currently offline.","Offline","https://imprecisely-signally-harmonious-bee.kitten.space",1],["GitHub","eye6row, all the code.","Code","https://github.com/eye6row"]]]];
+let i=0;document.getElementById('m').innerHTML=D.map(([s,c])=>`<section><h2>${s}</h2><div class="grid">${c.map(([n,d,t,u,o])=>`<a class="card${o?' off':''}" href="${u}" target="_blank" rel="noopener"><div class="top"><span>${String(++i).padStart(2,'0')}</span><span>${t}</span></div><div><div class="n">${n}</div><div class="d">${d}</div></div><span class="go">↗</span></a>`).join('')}</div></section>`).join('');
+</script></body></html>
